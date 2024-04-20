@@ -6,13 +6,14 @@
 
 Post a message:
 <form action="/blog/create" method="post">
-    <input type="text" name="title" placeholder="Title">
-    <input type="text" name="content" placeholder="Content">
+    <input type="text" name="title" placeholder="Title"><br>
+    <textarea name="content" placeholder="Content"></textarea><br>
       {{ csrf_field() }}
     <input type="submit">
 </form>
 
-Recent Messages:
+Blog Messages:
+
 
 <ul>
     @foreach($messages as $message)
